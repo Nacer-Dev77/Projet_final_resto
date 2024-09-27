@@ -1,0 +1,15 @@
+<!--Page home admin-->
+<section class="section_home_admin">
+
+    <article class="home_admin">
+        <p>Portail admin</p>
+
+        <?php
+// afficher date et heure actuelle au moment de la connexion admin.
+        date_default_timezone_set('Europe/Paris');
+        $date = date(' d-m-y h:i:s');
+        echo $date;
+        ?>
+    </article>
+
+</section>

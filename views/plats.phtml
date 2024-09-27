@@ -1,0 +1,27 @@
+<!--Page pour afficher le menu des plats.-->
+
+<h2><i class="fa-solid fa-utensils"></i>Nos Plats<i class="fa-solid fa-utensils"></i></h2>
+<section class="plats">
+	
+	<?php foreach ($products as $product) : ?>
+
+		<?php if ($product['prod_category_id'] == '2') : ?>
+
+			<article class="plats_group">
+				
+				<figure class="salade js_basket_group" id="<?= htmlspecialchars($product['prod_id']) ?>">
+					<img src="asset/images/products_images/plat/<?= $product['prod_image'] ?>" alt="photo de plat">
+					<h4>Nom:</h4>
+					<p><?= htmlspecialchars($product['prod_name']) ?></p>
+					<h4>Description: </h4>
+					<p><?= htmlspecialchars($product['prod_description']) ?></p>
+					<figcaption>
+						<p class="price">Prix: <?= number_format(htmlspecialchars($product['prod_price']), 2) ?>€</p>
+					</figcaption>
+					<button class="js_add_product_basket">Ajouter au panier</button>
+				</figure>
+			</article>
+		<?php endif; ?>
+	<?php endforeach; ?>
+
+</section>

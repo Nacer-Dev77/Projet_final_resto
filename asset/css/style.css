@@ -1,0 +1,2014 @@
+/* *************************** ************************************************* */
+/* renseignements de connexion coté front && back admin */
+/* *************************** ************************************************* */
+/* Email de connexion admin ===== wacademy@3wa.io */
+/* Password de connexion admin ===== admin2022 */
+/* *************************** ************************************************* */
+/* *************************** ************************************************* */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+    line-height: 1.5;
+    font-family: sans-serif;
+
+}
+
+main .container {
+    margin: 2rem;
+}
+
+.display_none {
+    display: none;
+}
+
+/* *************************** ************************************************* */
+/* *********************** Mobile first ***************************************** */
+/* *************************** ************************************************* */
+
+@media screen and (min-width: 320px) {
+
+    /* *********************** Image et Navigation ***************************************** */
+    main .container {
+        margin: 2rem;
+    }
+
+    .navbar_session p {
+        margin: 2rem;
+        color: black;
+    }
+
+    .menus {
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .menus a {
+        color: aliceblue;
+        font-size: 10px;
+    }
+
+    .menus ul {
+        list-style: none;
+        display: flex;
+        padding: 0;
+        justify-content: space-around;
+        background-color: #303130;
+    }
+
+    .menus ul li {
+        background-color: #303130;
+    }
+
+    .menus>ul>li>ul {
+        opacity: 0;
+        transform: translateX(-10px);
+        position: absolute;
+        pointer-events: none;
+        display: block;
+    }
+
+    .menus ul>li:hover>ul {
+        opacity: 1;
+        transition: all 0.5s;
+    }
+
+    .menus ul>li:hover>ul {
+        opacity: 1;
+        transform: translateX(0px);
+        pointer-events: auto;
+    }
+
+    .menus ul>ul>li {
+        border-top: 1px solid #444;
+        position: relative;
+    }
+
+    .menus .fa-solid {
+        color: white;
+        margin-left: 10px;
+    }
+
+
+    /* *********************** Page Accueil***************************************** */
+    h1 {
+        font-size: 12px;
+        text-align: center;
+        margin: 2rem;
+    }
+
+    .nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .volute_left {
+        margin-right: 1rem;
+        width: 4rem;
+    }
+
+    .volute_right {
+        margin-left: 1rem;
+        width: 4rem;
+    }
+
+    .fa-utensils {
+        font-size: 20px;
+        margin: 1rem;
+        color: orangered;
+    }
+
+    #slider img {
+        position: relative;
+        width: 80%;
+        height: 20rem;
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+
+    #slider {
+        position: relative;
+        width: 100%;
+        margin: 0;
+        display: flex;
+        align-items: center;
+    }
+
+    .presentation p {
+        margin: 2rem;
+        color: black;
+        font-size: 18px;
+        margin-bottom: 5rem;
+        text-align: justify;
+        font-size: 12px;
+    }
+
+    .presentation h2 {
+        text-align: center;
+        font-size: 15px;
+    }
+
+    .horraires {
+        display: grid;
+        margin-bottom: 5rem;
+    }
+
+    .tableau {
+        margin: 2rem;
+    }
+
+    .adresse {
+        margin-bottom: 5rem;
+        margin: 2rem;
+    }
+
+    .adresse p {
+        font-size: 10px;
+    }
+
+    .fa-location-dot {
+        color: orangered;
+        margin: 1rem;
+    }
+
+    iframe {
+        margin: 0;
+        width: 100%;
+    }
+
+    .table_comment {
+        background-image: url(../images/tableau2.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        color: azure;
+        list-style: none;
+        margin-bottom: 3rem;
+    }
+
+    .table_comment q {
+        color: black;
+    }
+
+    .display_comments {
+        text-align: center;
+        margin: 2rem;
+    }
+
+    .display_comments h3 {
+        margin-bottom: 3rem;
+        text-align: center;
+    }
+
+    .addcomment_user {
+        list-style: none;
+    }
+
+    .addcomment_user a {
+        background-color: transparent;
+        color: blue;
+        text-decoration: none;
+        font-size: 13px;
+    }
+
+    .addcomment_user p {
+        font-size: 10px;
+    }
+
+    footer {
+        text-align: center;
+        background-color: #214e5d;
+        margin: 2rem;
+    }
+
+    .fa-envelope {
+        color: aliceblue;
+    }
+
+    .contact a {
+        text-decoration: none;
+    }
+
+    .contact h2 {
+        color: aliceblue;
+        font-size: 20px;
+    }
+
+    .fa-facebook,
+    .fa-instagram,
+    .fa-twitter {
+        margin: 1rem;
+        font-size: 26px;
+        color: aliceblue;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    .licence p {
+        color: aliceblue;
+        font-size: 10px;
+    }
+
+    /* *********************** Page Menu ***************************************** */
+
+    .entree p,
+    h2 {
+        text-align: center;
+        font-size: 20px;
+        margin-bottom: 5rem;
+    }
+
+    .salade p {
+        font-size: 13px;
+    }
+
+    .salade img {
+        width: 20rem;
+        height: 20rem;
+    }
+
+    .salade {
+        list-style: none;
+        background-color: burlywood;
+
+        width: 20rem;
+        border-bottom: 2px solid black;
+        margin-top: 3px;
+        text-align: center;
+    }
+
+    .desserts_group,
+    .entree_group,
+    .plats_group,
+    .boissons_group {
+        margin-bottom: 4rem;
+        display: flex;
+        justify-content: center;
+    }
+
+    /* *********************** Page connexion ***************************************** */
+    .section_reservation p {
+        font-size: 10px;
+        text-align: center;
+    }
+
+    .img_user {
+        width: 2rem;
+    }
+
+    .users {
+        margin: 2rem;
+    }
+
+    .users img {
+        border-style: none;
+        width: 100%;
+        height: 20rem;
+    }
+
+    .users {
+        text-align: center;
+        display: block;
+        margin-bottom: 5rem;
+    }
+
+    .users input {
+        font-size: 1rem;
+        margin-bottom: 15px;
+        padding: 0.5rem;
+        border: none;
+        opacity: 0.4;
+    }
+
+    .users button {
+        font-size: 1rem;
+        margin: 15px;
+        border: none;
+        color: black;
+    }
+
+    .form_connect {
+        margin-top: -26rem;
+    }
+
+    .users h2,
+    a {
+        color: aliceblue;
+        text-decoration: none;
+        font-size: 12px;
+    }
+
+    .users p {
+        color: aliceblue;
+    }
+
+    .users strong {
+        font-size: 8px;
+    }
+
+    /* *********************** Page creation de compte ***************************************** */
+    .users_create_form {
+        border: 2px solid #5c1605;
+        background-color: cadetblue;
+    }
+
+    .users_create {
+        margin-top: 0;
+        text-align: center;
+        padding: 2rem;
+    }
+
+    .users_create h2 {
+        color: black;
+    }
+
+    .users_create p {
+        color: black;
+        font-size: 10px;
+    }
+
+    .users_create input {
+        margin: 1rem;
+        font-size: 2rem;
+        height: 3rem;
+    }
+
+    .users_create button {
+        margin: 15px;
+        border: none;
+        color: black;
+    }
+
+    /* ***********************formulaire de commentaires ***************************************** */
+    .addcomment_user {
+        background-color: cadetblue;
+        margin: 2rem;
+    }
+
+    .valid_com {
+        text-align: center;
+    }
+
+   
+    /* ***********************Panier ****************************************************************** */
+
+    /* ***** produit du panier ****************** */
+
+    .basket {
+        border: 2px solid black;
+        width: 75%;
+        margin: 4rem;
+        text-align: center;
+        padding: 8px;
+    }
+
+    .basket_article {
+        border-bottom: 2px solid black;
+        margin-bottom: 3rem;
+        display: flex;
+        justify-content: space-around;
+        align-content: center;
+        flex-direction: column;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+}
+
+.valid_basket_formulaire {
+    border: 2px solid black;
+    width: 75%;
+    margin: 0 auto;
+}
+
+.btn_delete_article {
+    background-color: black;
+    color: aliceblue;
+    width: 14rem;
+    cursor: pointer;
+    margin-bottom: 2rem;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.btn_valid_basket {
+    background-color: black;
+    color: aliceblue;
+    cursor: pointer;
+    padding: 5px;
+    font-size: 12px;
+}
+
+/* ***** formulaire  coordonée****************** */
+
+.basket_formulaire {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+.btn_information {
+    background-color: black;
+    color: aliceblue;
+    font-size: 12px;
+    padding: 0px;
+    margin-bottom: 20px;
+    margin-top: 30px;
+    cursor: pointer;
+}
+
+.button_formulaire a {
+    background-color: black;
+    color: aliceblue;
+    font-size: 12px;
+    padding: 0px;
+    margin-bottom: 20px;
+    margin-top: 30px;
+    cursor: pointer;
+}
+
+.basket_formulaire label {
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+.basket_formulaire input {
+    font-size: 14px;
+    padding: 1px;
+    margin-bottom: 10px;
+}
+
+.card_pay img {
+    width: 15rem;
+    margin-top: 5rem;
+}
+
+/************************ Paiement accepté********************************************* */
+
+.valid_pay {
+    border: 2px solid black;
+    text-align: center;
+}
+
+.valid_pay p {
+    color: black;
+    text-align: center;
+    font-size: 15px;
+}
+
+.btn_return_home {
+    margin-right: 5rem;
+    font-size: 10px;
+    color: aliceblue;
+}
+
+.btn_continue {
+    font-size: 10px;
+    color: aliceblue;
+}
+
+
+
+
+/* ***********************formulaire des Mentions Légales ***************************************** */
+.mention {
+    margin: 2rem;
+}
+
+.mention h2,
+h3 {
+    text-align: center;
+    font-size: 12px;
+    margin: 2rem;
+}
+
+.mention p {
+    text-align: justify;
+}
+
+/* ************************************************************************ */
+/* ***************************** Admin  *********************************** */
+/* ************************************************************************ */
+
+/* ************************************************************************ */
+/* ***************************** Admin mobile first *********************** */
+/* ************************************************************************ */
+
+/* ***************************** Formulaire de connexion admin *********** */
+
+.admin_connectimg {
+    position: absolute;
+    top: 8rem;
+    background-image: url(../images/menu1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 90%;
+    height: 72%;
+}
+
+.admin_input {
+    width: 12rem;
+    height: 2rem;
+    border: none;
+    opacity: 0.4;
+    border-color: grey;
+    border-radius: 10px;
+    margin-top: 11rem;
+    margin-left: 8rem;
+}
+
+.admin_input h2 {
+    text-align: center;
+    color: aliceblue;
+    font-size: 17px;
+}
+
+.admin_input input {
+    margin-bottom: 2rem;
+}
+
+.admin_connect input {
+    width: 12rem;
+    height: 2rem;
+    border: none;
+    opacity: 0.4;
+    border-color: grey;
+    border-radius: 10px;
+    margin-top: 10rem;
+    margin-left: 20rem;
+}
+
+/* ***************************** Navigation admin  ************************* */
+
+.navbar_admin {
+    margin-bottom: 2rem;
+}
+
+.navbar_admin a {
+    color: gold;
+}
+
+.navbar_admin ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar_admin li {
+    border: 2px solid #141413;
+    width: 10rem;
+    background-color: #131212;
+    border-radius: 2rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.home_admin {
+    border-block: 2px solid;
+    background-color: black;
+    color: aliceblue;
+    width: 100%;
+    text-align: center;
+}
+
+/* ***************************** Les tableaux admin ************************* */
+
+.tab_users th,
+tr {
+    font-size: 7px;
+}
+
+.tab_users,
+.tab_comments,
+.tab_reserv,
+.tab_products {
+    border: solid 2px blanchedalmond;
+    border-collapse: collapse;
+    text-align: left;
+    width: 100%;
+}
+
+.tab_users th,
+.tab_comments th,
+.tab_reserv th,
+.tab_products th {
+    border: solid 2px blanchedalmond;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.tab_users,
+.tab_comments,
+.tab_reserv,
+.tab_products tr,
+td {
+    border: solid 2px blanchedalmond;
+    border-collapse: collapse;
+    text-align: left;
+    /* margin-left: -20px; */
+}
+
+.users_admin h2,
+.comments_table h2,
+.reservations h2,
+.products h2,
+.add_products h2 {
+    text-align: center;
+    margin: 4rem;
+}
+
+.reservations a,
+.comments_table a,
+.products a {
+    color: blue;
+    font-size: 6px;
+}
+
+/* ***************************** Formulaire ajout produits admin  ************************* */
+
+.add_products form {
+    background-color: cadetblue;
+}
+
+.add_products form label {
+    font-size: 20px;
+}
+
+.form_product fieldset {
+    font-size: 1rem;
+    height: 75rem;
+}
+
+.form_product legend {
+    font-size: 20px;
+}
+
+.addprod_name input,
+.addprod_description textarea,
+.addcategrie select,
+.addprod_price input,
+.addprod_image input {
+    display: flex;
+    margin-bottom: 3rem;
+    margin-top: 2rem;
+    height: 3rem;
+}
+
+.addprod_description textarea {
+    width: 20rem;
+    height: 10rem;
+}
+
+.addprod_name,
+.addprod_description,
+.addcategrie,
+.addprod_price,
+.addprod_image {
+    margin-top: 2rem;
+}
+
+.add_products button {
+    margin-left: 10rem;
+    width: 15rem;
+    height: 3rem;
+}
+
+
+
+/* *********************** Mode tablette ***************************************** */
+/* *************************** ************************************************* */
+
+@media screen and (min-width: 680px) {
+
+    /* *********************** Navigation ******************************************* */
+    .menus {
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .menus ul {
+        list-style: none;
+        display: flex;
+        padding: 0;
+        justify-content: space-around;
+        background-color: #303130;
+        height: 30px;
+    }
+
+    .menus ul li {
+        background-color: #303130;
+    }
+
+    .menus a {
+        color: aliceblue;
+        font-size: 16px;
+    }
+
+    h1 {
+        font-size: 25px;
+        text-align: center;
+        margin: 2rem;
+    }
+
+    .volute_left {
+        margin-right: 1rem;
+        width: 5rem;
+    }
+
+    .volute_right {
+        margin-left: 1rem;
+        width: 5rem;
+    }
+
+    /* ***********************slider & texte de présentation  ******************************************* */
+    #slider img {
+        position: relative;
+        width: 100%;
+        height: 40rem;
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
+
+    #slider .fa-circle-chevron-left {
+        transition: opacity 0.3s ease;
+        opacity: 0;
+        position: absolute;
+        font-size: 30px;
+        color: rgba(220, 220, 220, 0.8);
+        padding: 10px;
+        z-index: 1;
+        cursor: pointer;
+        margin-left: 1.5rem;
+        margin-top: -2rem;
+    }
+
+    #slider .fa-circle-chevron-right {
+        transition: opacity 0.3s ease;
+        opacity: 0;
+        position: absolute;
+        font-size: 30px;
+        color: rgba(220, 220, 220, 0.8);
+        padding: 10px;
+        cursor: pointer;
+        margin-right: 1.5rem;
+        margin-top: -2rem;
+    }
+
+    .fa-circle-chevron-left {
+        left: 0;
+    }
+
+    .fa-circle-chevron-right {
+        right: 0;
+    }
+
+    #slider:hover .fa-circle-chevron-left,
+    #slider:hover .fa-circle-chevron-right {
+        opacity: 1;
+    }
+
+    .presentation h2 {
+        text-align: center;
+        margin: 4rem;
+    }
+
+    .presentation p {
+        margin: 2rem;
+        color: black;
+        font-size: 18px;
+        margin-bottom: 5rem;
+        text-align: justify;
+    }
+
+    /* *********************** Horaires ******************************************* */
+    .tableau {
+        margin: 2rem;
+    }
+
+    /* *********************** Adresse ******************************************* */
+    .adresse {
+        margin: 2rem;
+    }
+
+    .adresse p {
+        font-size: 16px;
+        text-align: center;
+    }
+
+    /* *********************** Commentaires ******************************************* */
+    .addcomment_user p {
+        font-size: 10px;
+        text-align: center;
+    }
+
+    .detail_comments {
+        margin: 2rem;
+    }
+
+    .valid_com {
+        text-align: center;
+        margin-top: 2rem;
+    }
+
+    .comment_user textarea {
+        overflow: auto;
+        margin-top: 2rem;
+        width: 40rem;
+        height: 12rem;
+    }
+
+    /* *********************** Footer ******************************************* */
+    footer {
+        text-align: center;
+        background-color: #214e5d;
+        margin: 4rem;
+    }
+
+    .copyright {
+        font-size: 16px;
+        color: #fff;
+    }
+
+    /* *********************** Pages menus ******************************************* */
+
+    .entree,
+    .plats,
+    .desserts,
+    .boissons {
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        gap: 1em;
+    }
+
+    /* *********************** Page connexion ***************************************** */
+    .section_reservation p {
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .form_connect {
+        margin-top: -45rem;
+    }
+
+    .users {
+        text-align: center;
+        display: block;
+        margin-bottom: 20rem;
+    }
+
+    .users img {
+        border-style: none;
+        width: 100%;
+        margin-bottom: 13rem;
+        height: 35rem;
+    }
+
+    .users h2,
+    a {
+        color: aliceblue;
+        text-decoration: none;
+        font-size: 30px;
+        margin-top: -39rem;
+    }
+
+    .users input {
+        font-size: 2rem;
+        margin-bottom: 15px;
+        padding: 0.5rem;
+        border: none;
+        opacity: 0.4;
+    }
+
+    .users button {
+        font-size: 2rem;
+        margin: 15px;
+        border: none;
+        color: black;
+    }
+
+    .users h2,
+    a {
+        color: aliceblue;
+        text-decoration: none;
+        font-size: 25px;
+        margin-top: -40rem;
+    }
+
+    .users strong {
+        font-size: 15px;
+    }
+
+    /* *********************** Page creation de compte ***************************************** */
+    .users_create_form {
+        border: 2px solid #5c1605;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 50rem;
+        background-color: cadetblue;
+    }
+
+    .users_create input {
+        margin: 2rem;
+        font-size: 2rem;
+        height: 3rem;
+    }
+
+    .users_create button {
+        margin: 15px;
+        border: none;
+        color: black;
+        font-size: 20px;
+        width: 10rem;
+    }
+
+    /************************ Panier ********************************************* */
+    .basket_article {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+        flex-direction: row;
+        border-bottom: 2px solid black;
+        margin-bottom: 3rem;
+    }
+
+    /************************ Paiement accepté********************************************* */
+
+    .valid_pay {
+        border: 2px solid black;
+        background-color: cadetblue;
+        text-align: center;
+    }
+
+    .valid_pay p {
+        color: black;
+        text-align: center;
+        font-size: 15px;
+    }
+
+    .btn_return_home {
+        margin-right: 5rem;
+        font-size: 15px;
+        color: aliceblue;
+    }
+
+    .btn_continue {
+        font-size: 15px;
+        color: aliceblue;
+    }
+
+    /* ***********************formulaire des Mentions Légales ***************************************** */
+    .mention {
+        margin: 2rem;
+    }
+
+    .mention h2,
+    h3 {
+        text-align: center;
+        font-size: 20px;
+        margin: 2rem;
+        margin-top: 6rem;
+    }
+
+    .mention p {
+        text-align: justify;
+    }
+
+    /* ************************************************************************ */
+    /* ***************************** Admin tablette *************************** */
+    /* ************************************************************************ */
+
+    /* ***************************** Navigation admin  ************************* */
+
+    .navbar_admin a {
+        color: gold;
+        font-size: 15px;
+    }
+
+    .navbar_admin ul {
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .navbar_admin li {
+        border: 2px solid #141413;
+        width: 14rem;
+        background-color: #131212;
+        border-radius: 2rem;
+        text-align: center;
+    }
+
+    /* ***************************** Les tableaux  ************************* */
+
+    .tab_users th,
+    tr {
+        font-size: 15px;
+    }
+
+    .tab_users,
+    .tab_comments,
+    .tab_reserv,
+    .tab_products {
+        border: solid 2px blanchedalmond;
+        border-collapse: collapse;
+        text-align: left;
+        width: 100%;
+    }
+
+    .tab_users th,
+    .tab_comments th,
+    .tab_reserv th,
+    .tab_products th {
+        border: solid 2px blanchedalmond;
+        border-collapse: collapse;
+        text-align: left;
+    }
+
+    .tab_users,
+    .tab_comments,
+    .tab_reserv,
+    .tab_products tr,
+    td {
+        border: solid 2px blanchedalmond;
+        border-collapse: collapse;
+        text-align: left;
+    }
+
+    .users_admin h2,
+    .comments_table h2,
+    .reservations h2,
+    .products h2,
+    .add_products h2 {
+        text-align: center;
+        margin: 4rem;
+    }
+
+    .reservations a,
+    .comments_table a,
+    .products a {
+        color: blue;
+        font-size: 15px;
+    }
+
+    /* ***************************** Formulaire ajout produits admin  ************************* */
+
+    .add_products form {
+        background-color: cadetblue;
+    }
+
+    .form_product fieldset {
+        width: 99%;
+        height: 75rem;
+    }
+
+    .form_product legend {
+        font-size: 20px;
+    }
+
+    .addprod_name input,
+    .addprod_description textarea,
+    .addcategrie select,
+    .addprod_price input,
+    .addprod_image input {
+        display: flex;
+        margin-bottom: 3rem;
+        margin-top: 2rem;
+        height: 3rem;
+    }
+
+    .addprod_description textarea {
+        width: 40rem;
+        height: 10rem;
+    }
+
+    .addprod_name,
+    .addprod_description,
+    .addcategrie,
+    .addprod_price,
+    .addprod_image {
+        margin-top: 2rem;
+    }
+
+    .add_products button {
+        margin-left: 25rem;
+        width: 15rem;
+        height: 3rem;
+    }
+
+}
+
+/* *************************** ************************************************* */
+/* *********************** Mode desctop ***************************************** */
+/* *************************** ************************************************* */
+
+@media screen and (min-width: 1024px) {
+
+    .name a {
+        font-family: 'Lobster Two', cursive;
+        color: red;
+        font-size: 5rem;
+        text-decoration: none;
+    }
+
+    .name {
+        background: rgb(133, 131, 131);
+        background: linear-gradient(63deg,
+                rgba(133, 131, 131, 1) 10%,
+                rgba(62, 175, 11, 1) 50%);
+    }
+
+    .menus {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .menus a {
+        color: white;
+
+        width: 15rem;
+        height: 3rem;
+        text-decoration: none;
+        background-color: #303130;
+        cursor: pointer;
+        display: inline-block;
+        margin: 1rem;
+        text-align: center;
+        font-size: 16px;
+    }
+
+    .menus a:hover {
+        color: white;
+        background-color: #950101;
+    }
+
+    .menus ul {
+        list-style: none;
+        display: flex;
+        padding: 0px;
+        justify-content: space-around;
+        background-color: #303130;
+        margin-top: 1rem;
+        height: 4rem;
+    }
+
+    .menus>ul>li>ul {
+        opacity: 0;
+        transform: translateX(-10px);
+        position: absolute;
+        pointer-events: none;
+        display: block;
+    }
+
+    .menus ul>li:hover>ul {
+        opacity: 1;
+        transition: all 0.5s;
+    }
+
+    .menus ul>li:hover>ul {
+        opacity: 1;
+        transform: translateX(0px);
+        pointer-events: auto;
+        margin-top: -1rem;
+        margin-left: 1rem;
+    }
+
+    .menus ul>ul>li {
+        border-top: 1px solid #444;
+        position: relative;
+    }
+
+    .menus .fa-solid {
+        color: white;
+        font-size: 20px;
+        margin-top: 0rem;
+    }
+
+    .tetenav figcaption {
+        position: relative;
+        top: -3rem;
+        line-height: 3em;
+        text-align: center;
+        margin-bottom: 4rem;
+    }
+
+    h1 {
+        font-family: 'Playfair Display', serif;
+        max-width: 100%;
+        color: black;
+        font-size: 40px;
+        text-align: center;
+        margin: 8rem;
+    }
+
+    .nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .volute_left {
+        margin-right: 2rem;
+        width: 10rem;
+    }
+
+    .volute_right {
+        margin-left: 2rem;
+        width: 10rem;
+    }
+
+    .fa-solid {
+        color: #ff5722;
+        margin: 8px;
+        font-size: 3rem;
+    }
+
+    .presentation h2 {
+        color: black;
+        text-align: center;
+        margin: 10rem;
+        font-size: 20px;
+    }
+
+    .presentation p {
+        font-family: 'Playfair Display', serif;
+        margin: 2rem;
+        color: black;
+        font-size: 18px;
+        margin-bottom: 1.5rem;
+        text-align: justify;
+    }
+
+    #slider {
+        position: relative;
+        width: 55rem;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        float: left;
+        margin-right: -20px;
+    }
+
+    #slider img {
+        width: 50rem;
+        height: 30rem;
+        position: relative;
+        border: 2px solid black;
+    }
+
+    #slider .fa-circle-chevron-left {
+        cursor: pointer;
+        transition: opacity 0.3s ease;
+        opacity: 0;
+        position: absolute;
+        font-size: 30px;
+        color: rgba(220, 220, 220, 0.8);
+        padding: 10px;
+        margin-right: 2.5rem;
+        margin-top: -2rem;
+    }
+
+    #slider .fa-circle-chevron-right {
+        cursor: pointer;
+        transition: opacity 0.3s ease;
+        opacity: 0;
+        position: absolute;
+        font-size: 30px;
+        color: rgba(220, 220, 220, 0.8);
+        padding: 10px;
+        margin-right: 2.5rem;
+        margin-top: -2rem;
+    }
+
+    .fa-circle-chevron-left {
+        left: 0;
+    }
+
+    .fa-circle-chevron-right {
+        right: 0;
+    }
+
+    #slider:hover .fa-circle-chevron-left,
+    #slider:hover .fa-circle-chevron-right {
+        opacity: 1;
+    }
+
+    .adresse p {
+        font-size: 2rem;
+        color: black;
+        margin: 4rem;
+        text-align: center;
+    }
+
+    .horraires {
+        text-align: -webkit-center;
+    }
+
+    .tableau {
+        margin: 2rem;
+        margin-inline: 20rem;
+    }
+
+    .tableau td {
+        padding: 0.5rem;
+        text-align: left;
+        color: black;
+        font-size: 20px;
+    }
+
+    .adresse {
+        text-align: center;
+        margin-bottom: 8rem;
+    }
+
+    .adresse iframe {
+        margin: 2rem;
+        width: 50%;
+        height: 30rem;
+    }
+
+    .mail {
+        font-size: 2rem;
+        color: black;
+        text-decoration: none;
+    }
+
+    .contact a,
+    h4,
+    p {
+        text-decoration: none;
+        color: aliceblue;
+    }
+
+
+    footer {
+        text-align: center;
+        background-color: #214e5d;
+        margin: 2rem;
+        margin-top: 10rem;
+    }
+
+    .fa-brands {
+        font-size: 4rem;
+        padding: 2rem;
+        color: white;
+    }
+
+    .licence .fa-solid {
+        color: black;
+    }
+
+    .licence a {
+        color: white;
+        font-size: 2rem;
+    }
+
+    /* *********************** Menu ***************************************** */
+
+    h3 {
+        color: black;
+        text-align: center;
+        font-size: 18px;
+        font-family: 'Dancing Script', cursive;
+    }
+
+    .fa-solid {
+        color: #ff5722;
+        margin: 8px;
+        font-size: 3rem;
+    }
+
+    .entree,
+    .plats,
+    .desserts,
+    .boissons {
+        display: grid;
+        grid-template-columns: repeat(4, auto);
+        gap: 1em;
+        justify-content: center;
+        margin-top: 5rem;
+    }
+
+    .entree_group img,
+    .plats_group img,
+    .desserts_group img,
+    .boissons_group img {
+        position: relative;
+        width: 20rem;
+        height: 20rem;
+        border: 1px solid black;
+        display: block;
+        object-fit: cover;
+    }
+
+    .entree_group strong,
+    .plats_group strong,
+    .desserts_group strong,
+    .boissons_group strong {
+        font-size: 16px;
+        color: black;
+        margin-bottom: 3rem;
+        position: relative;
+        top: 0;
+        line-height: 5rem;
+        left: 0;
+    }
+
+    .salade .price {
+        color: white;
+        font-size: 20px;
+    }
+
+    .salade,
+    .plat,
+    .dessert,
+    .boisson p,
+    h2 {
+        text-align: center;
+        margin-top: 6rem;
+    }
+
+    .salade,
+    .plat,
+    .dessert,
+    .boisson {
+        position: relative;
+        width: 20rem;
+
+        list-style: none;
+    }
+
+    .salade ul,
+    .plat ul,
+    .dessert ul,
+    .boisson ul {
+        list-style: none;
+    }
+
+    .salade figcaption,
+    .plat figcaption,
+    .dessert figcaption,
+    .boisson figcaption {
+        background-color: rgba(0, 0, 0, 0.6);
+        color: #fff;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+        transition: opacity 1s;
+        width: 20rem;
+        height: 20rem;
+    }
+
+    .salade figcaption:hover,
+    .plat figcaption:hover,
+    .dessert figcaption:hover,
+    .boisson figcaption:hover {
+        opacity: 1;
+    }
+
+    .js_add_product_basket {
+        border-radius: 5px;
+        cursor: pointer;
+        padding: 3px 7px;
+        font-size: 15px;
+    }
+
+    /* *********************** formulaire de connexion ***************************************** */
+    .section_reservation p {
+        font-size: 20px;
+        text-align: center;
+        color: black;
+    }
+
+    .users img {
+        border-style: none;
+        width: 50%;
+        margin-bottom: 10rem;
+        height: 45rem;
+        margin-top: 8rem;
+    }
+
+    .users h2,
+    a {
+        color: aliceblue;
+        text-decoration: none;
+        font-size: 30px;
+        margin-top: -39rem;
+    }
+
+    .users input {
+        font-size: 2rem;
+        margin-bottom: 15px;
+        padding: 0.5rem;
+        border: none;
+        opacity: 0.4;
+    }
+
+    .users button {
+        font-size: 2rem;
+        margin: 15px;
+        border: none;
+        color: black;
+    }
+
+    .users h2,
+    a {
+        color: aliceblue;
+        text-decoration: none;
+        font-size: 25px;
+        margin-top: -40rem;
+    }
+
+    .users strong {
+        font-size: 15px;
+        color: aliceblue;
+    }
+
+    /* *********************** Page creation de compte ***************************************** */
+
+    .users_create input {
+        margin: 2rem;
+        font-size: 2rem;
+        height: 3rem;
+    }
+
+    .users_create_form {
+        border: 2px solid #5c1605;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 60rem;
+        background-color: cadetblue;
+        width: 50%;
+        display: inline-block;
+        margin-top: 8rem;
+    }
+
+    .users_create button {
+        margin: 15px;
+        border: none;
+        color: black;
+        font-size: 2rem;
+        width: 10rem;
+        cursor: pointer;
+    }
+
+    /* ***********************formulaire d'ajout commentaires ***************************************** */
+
+    .addcomment_user {
+        margin-top: 4rem;
+        text-align: center;
+        margin-bottom: 6rem;
+        color: black;
+        width: 100%;
+    }
+
+    .addcomment_user p {
+        text-align: center;
+        font-size: 16px;
+    }
+
+    .addcomment_user a {
+        color: blue;
+        text-decoration: none;
+        font-size: 20px;
+    }
+
+    .addcomment_user li {
+        list-style: none;
+    }
+
+    .orders_products ul {
+        list-style: none;
+    }
+
+    .orders_products a {
+        text-decoration: none;
+        color: blue;
+    }
+
+    .orders_products input {
+        width: 5rem;
+    }
+
+    /* ***************************** Gestion des erreurs *********************************** */
+    .errors {
+        list-style: none;
+        color: red;
+        font-size: 20px;
+    }
+
+    /* ***************************** commentaires page Home *********************************** */
+
+    .display_comments {
+        margin: 10rem 0;
+        padding: 2rem 1rem 2rem 2rem;
+        background-color: #ededed;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: stretch;
+        align-items: center;
+    }
+
+    .table_comment {
+        background-image: url(../images/tableau2.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin-bottom: 4rem;
+        width: 28rem;
+        height: 28rem;
+        color: aliceblue;
+        list-style: none;
+        display: inline-grid;
+        margin-bottom: 8rem;
+        margin: 2rem;
+    }
+
+    .scroll {
+        height: 30rem;
+        overflow: auto;
+        padding-right: 1rem;
+        width: 30rem;
+    }
+
+    blockquote {
+        margin: 3rem 0;
+    }
+
+    q {
+        color: black;
+    }
+
+    cite {
+        display: flex;
+        align-items: center;
+        margin-top: 1rem;
+    }
+
+    .display_comments h3 {
+        color: black;
+        margin-bottom: 4rem;
+    }
+
+    /* *****************************formulaire de commentaires  *********************************** */
+    .comment_connect {
+        margin-top: 4rem;
+        text-align: center;
+        color: black;
+        width: 100%;
+        height: 5rem;
+    }
+
+    .addcomment_user {
+        margin-top: 4rem;
+        text-align: center;
+        color: black;
+        width: 100%;
+        margin: 0;
+    }
+
+    .addcomment_user fieldset {
+        height: 40rem;
+    }
+
+    .addcomment_user legend {
+        font-size: 20px;
+    }
+
+    .valid_com button {
+        border-radius: 2rem;
+        width: 12rem;
+        height: 4rem;
+        cursor: pointer;
+        background-color: #c29b99;
+    }
+
+    .comment_user textarea {
+        overflow: auto;
+        margin-top: 5rem;
+        width: 50rem;
+        height: 20rem;
+    }
+
+    
+
+    /* ************************************************************************ */
+    /* ***************************** Admin tablette *************************** */
+    /* ************************************************************************ */
+    /* * *************************** *************************************************  */
+    /* *************************** ************************************************* */
+    /* Email de connexion admin ===== wacademy@3wa.io */
+    /* Password de connexion admin ===== admin2022 */
+    /* *************************** ************************************************* */
+    /* *************************** ************************************************* */
+
+    /* *********************** formulaire de connexion admin***************************************** */
+
+    .admin_input {
+        width: 18rem;
+        height: 2rem;
+        border: none;
+        opacity: 0.4;
+        border-color: grey;
+        border-radius: 10px;
+        margin-top: 21rem;
+        margin-left: 17rem;
+    }
+
+    .admin_input input {
+        margin-bottom: 2rem;
+        width: 25rem;
+        height: 3rem;
+        margin-top: 2rem;
+    }
+
+    .admin_input h2 {
+        text-align: center;
+        color: aliceblue;
+        font-size: 25px;
+    }
+
+    .admin_input button {
+        width: 15rem;
+        height: 3rem;
+    }
+
+    /* *********************** formulaire ajout produit admin***************************************** */
+
+    .addprod_name,
+    .addprod_description,
+    .addcategrie,
+    .addprod_price,
+    .addprod_image {
+        margin-top: 2rem;
+        margin-left: 40rem;
+    }
+
+    .addprod_description textarea {
+        width: 40rem;
+        height: 10rem;
+        font-size: 16px;
+    }
+
+    .add_products button {
+        margin-left: 40rem;
+        width: 30rem;
+        height: 4rem;
+        font-size: 18px;
+    }
+
+    .addprod_name input,
+    .addcategrie select,
+    .addprod_price input,
+    .addprod_image input {
+        display: flex;
+        margin-bottom: 3rem;
+        margin-top: 2rem;
+        height: 3rem;
+        width: 30rem;
+        font-size: 18px;
+    }
+
+    .addprod_image input {
+        font-size: 17px;
+    }
+
+    /* *********************** les tableaux admin ****************************************************** */
+    .tab_users th,
+    .tab_comments th,    
+    .tab_products th {
+        border: solid 2px blanchedalmond;
+        border-collapse: collapse;
+        text-align: left;
+        background-color: antiquewhite;
+    }
+
+    .basket_descreption p {
+        color: black;
+        font-size: 15px;
+    }
+
+    .totalQuantity {
+        color: black;
+        font-size: 18px;
+    }
+
+    /* *********************** *************************************************************** */
+    /* ********************************* Panier ********************************************* */
+    /* *********************** *************************************************************** */
+
+    /* *********************** Produit du  Panier********************************************* */
+    .basket {
+        border: 2px solid black;
+        width: 90rem;
+        height: auto;
+        margin: 6rem auto 0 auto;
+        padding: 20px;
+    }
+
+    .btn_delete_article {
+        background-color: black;
+        color: aliceblue;
+        cursor: pointer;
+        margin-bottom: 2rem;
+
+    }
+
+    .js_name,
+    .js_price,
+    .js_quantity {
+        /*margin-left: 1rem;*/
+        width: 15rem;
+
+    }
+
+    .btn_delete_article:hover {
+        background-color: #5c1605;
+        color: aliceblue;
+    }
+
+    .btn_valid_basket {
+        background-color: black;
+        color: aliceblue;
+        width: 14rem;
+        cursor: pointer;
+        padding: 4px;
+        font-size: 18px;
+        border-radius: 5px;
+    }
+
+    .btn_valid_basket:hover {
+        background-color: #5c1605;
+        color: aliceblue;
+    }
+
+    .basket_article {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+        flex-direction: row;
+        border-bottom: 2px solid black;
+        margin-bottom: 3rem;
+    }
+
+    .basket_formulaire {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: center;
+    }
+
+    .total_quantity {
+        font-size: 20px;
+        margin-left: 6rem;
+    }
+
+    .total_price {
+        text-align: right;
+        font-size: 20px;
+        margin-top: -5rem;
+        margin-right: 6rem;
+    }
+
+    /* *********************** Formulaire coordonnée********************************************* */
+
+    .valid_basket_formulaire {
+        border: 2px solid black;
+        width: 90rem;
+        height: auto;
+        margin: 6rem auto 0 auto;
+    }
+
+    .basket_formulaire label {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+
+    .basket_formulaire input {
+        font-size: 18px;
+        padding: 2px;
+        margin-bottom: 10px;
+    }
+
+    .btn_information {
+        background-color: black;
+        color: aliceblue;
+        font-size: 18px;
+        padding: 4px;
+        margin-bottom: 20px;
+        margin-top: 30px;
+        cursor: pointer;
+    }
+
+    .btn_information:hover {
+        background-color: #5c1605;
+        color: aliceblue;
+    }
+
+    .card_pay img {
+        width: 40%;
+        margin-top: 4rem;
+        margin-left: 26rem;
+    }
+
+    .button_formulaire a {
+        margin-left: 40px;
+        background-color: black;
+        color: aliceblue;
+        font-size: 18px;
+        padding: 4px;
+        margin-bottom: 20px;
+        margin-top: 30px;
+        cursor: pointer;
+    }
+
+    /* *********************** Paiement accepté********************************************* */
+
+    .valid_pay {
+        border: 2px solid black;
+        margin-top: 6rem;
+        text-align: center;
+    }
+
+    .valid_pay p {
+        color: black;
+        text-align: center;
+    }
+
+    .btn_valid_pay {
+        margin-top: 4rem;
+    }
+
+    .btn_return_home {
+        font-size: 20px;
+        color: aliceblue;
+        margin-right: 5rem;
+    }
+
+    .btn_continue {
+        font-size: 20px;
+        color: aliceblue;
+    }
+
+}

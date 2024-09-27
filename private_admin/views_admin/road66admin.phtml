@@ -1,0 +1,28 @@
+<!-- * *************************** ************************************************* */
+/* renseignements de connexion coté front && back admin */
+/* *************************** ************************************************* */
+/* Email de connexion admin ===== wacademy@3wa.io */
+/* Password de connexion admin ===== admin2022 */
+/* *************************** ************************************************* */
+/* *************************** ************************************************* */ -->
+<section class="section_adminConnect">
+
+	<article class="admin_Connect">
+		<div>
+
+			<form action="index.php?road=adminConnect" method="POST" class="admin_connectimg">
+
+				<div class="admin_input">
+
+					<h2>Identifiez-Vous</h2>
+
+					<input type="email" name="email" id="email" placeholder="votre email...."><br>
+					<input type="password" name="password" id="userPassword" placeholder=" mot de passe....."><br>
+					<?php require_once('_errors.phtml'); ?>
+
+					<button type="submit">Connexion</button>
+				</div>
+			</form>
+		</div>
+	</article>
+</section>

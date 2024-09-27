@@ -1,0 +1,50 @@
+<!--Formulaire préremplie pour modifier les produits.-->
+<section class="section_add_products">
+
+    <article class="add_products">
+        <h2>Tableau des produits</h2>
+
+        <form action="index.php?road=update&id=<?= htmlspecialchars($product['prod_id']) ?>" method="POST" class="form_product">
+            <fieldset>
+                <legend>
+                    Modifier produit
+                </legend>
+
+
+                <?php require_once('_errors.phtml'); ?>
+
+                <div class="addprod_name">
+                    <label for="name">Nom du produit</label>
+                    <input type="name" name="prod_name" id="prod_name" value="<?= htmlspecialchars($product['prod_name']) ?>">
+                </div>
+
+                <div class="addprod_description">
+                    <label for="name">Description</label>
+                    <textarea name="prod_description" id="prod_description"><?= htmlspecialchars($product['prod_description']) ?></textarea>
+                </div>
+                <div class="addcategrie">
+
+                    <select name="cat_name">
+                        <option value="error">choisir catégorie</option>
+                        <?php foreach ($categories as $cat) : ?>
+                            <option value="<?= htmlspecialchars($cat['id']) ?>" <?php if ($product['prod_category_id'] == $cat['id']) : ?> selected <?php endif; ?>><?= htmlspecialchars($cat['cat_name']) ?></option>
+                        <?php endforeach; ?>
+                    </select>
+
+                </div>
+                <div class="addprod_price">
+                    <label for="name">Prix</label>
+                    <input type="name" name="prod_price" id="prod_price" value="<?= number_format(htmlspecialchars($product['prod_price']), 2) ?>">
+                </div>
+                <div class="addprod_image">
+                    <label for="fileUpload">Importer image</label>
+
+                    <input type="file" id="fileUpload" name="prod_image">
+                </div>
+
+                <button type="submit">Modifier</button>
+
+            </fieldset>
+        </form>
+    </article>
+</section>

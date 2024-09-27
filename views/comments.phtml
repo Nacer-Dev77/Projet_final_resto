@@ -1,0 +1,35 @@
+<section class="section_comment">
+<!--Page pour afficher les commentaires.-->
+  
+    <div class="addcomment_user">
+
+        
+
+        <?php if (isset($_SESSION['connected']) && $_SESSION['connected'] == true) : ?>
+            <fieldset>
+                <legend>Donnez nous votre avis</legend>
+                <form action="index.php?route=UserComment" method="POST">
+
+
+                    <?php require_once('_errors.phtml'); ?>
+
+                    <div class="comment_user">
+                        <label for="content">Commentaire</label>
+                        <textarea name="content" id="content" class="form-user"></textarea>
+                    </div>
+                    <div class="valid_com">
+                        <button>Envoyer</button>
+                    </div>
+                </form>
+                </fieldset>
+            <?php else : ?>
+            
+
+            <ul>
+            <li class="comment_connect">
+                <p>pour laisser un commentaire <a href="index.php?route=connect"> connectez-vous </a></p>
+            </li>
+            </ul>
+    </div>
+<?php endif; ?>
+</section>

@@ -1,0 +1,25 @@
+<!--Page du formulaire de création de compte.-->
+<section class="section_users_create">
+	<article class="users_create">
+
+
+		<form action="index.php?route=submitFormAddUser" method="POST" class="users_create_form">
+	
+			<h2>Créez votre compte</h2>
+			<?php require_once('_errors.phtml'); ?>
+	
+			<input type="text" name="lastname" id="lastname" placeholder=" Le nom...."><br>
+	
+			<input type="text" name="firstname" id="firstname" placeholder=" Le prénom...."><br>
+	
+			<input type="email" name="email" id="email" placeholder=" L'email...."><br>
+	
+			<input type="password" name="password" id="userPassword" placeholder=" Le mot de passe.....">
+			<p>le mot de passe doit contenir minimum 8 caractères</p>
+	
+			<button type="submit">Valider</button>
+	
+		</form>
+
+	</article>
+ </section>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="restaurant gastronomique en seine et marne">
+    <title>Tableau Control Admin</title>
+    <link rel="icon" type="image/png" href="../favicon/fav-resto1.png"> 
+    <link rel="stylesheet" href="../asset/css/normalize.css">
+    <link rel="stylesheet" href="../asset/css/style.css">
+    <script src=" https://kit.fontawesome.com/3e516f940b.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet">
+</head>
+
+
+
+<body>
+
+    <header class="header_admin">
+        <!--si connexion réussite   -->
+        <?php if (isset($_SESSION['connected_admin']) && $_SESSION['connected_admin'] == true) : ?>
+         <!--si connexion réussite afficher la bar de navigation admin.-->
+            <nav class="navbar_admin">
+                <ul>
+                    <li><a href="index.php?road=users_admin">Utilisateurs</a></li>
+                    <li><a href="index.php?road=reservation_admin">Réservations</a></li>
+                    <li><a href="index.php?road=comments">Commentaires</a></li>
+                    <li><a href="index.php?road=products">Produits</a></li>
+                    <li><a href="index.php?road=deconnexion">Déconnexion</a></li>
+                </ul>
+            </nav>
+        <?php endif; ?>
+    </header>
+
+    <main class="container">
+        <?php if (isset($_SESSION['connected_admin']) && $_SESSION['connected_admin'] == true) : ?>
+        <!--si connexion réussite afficher le message d'accueil avec le nom de l'admin-->
+            <p><i class="fa-solid fa-user-large"></i> Bonjour, <?= htmlspecialchars($_SESSION['admin']['lastname']) ?></p>
+        <?php endif; ?>
+
+        <?php include_once $views_admin . '.phtml' ?>
+    </main>
+</body>
+
+</html>

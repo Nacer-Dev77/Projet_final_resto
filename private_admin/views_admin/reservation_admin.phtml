@@ -1,0 +1,47 @@
+<!--Tableau de gestion des réservations.-->
+<section class="section_reservations">
+
+    <article class="reservations">
+
+
+        <h2>Tableau des réservations</h2>
+
+
+        <div>
+            <table class="tab_reserv">
+                <thead>
+                    <tr>
+                        <th>Nom</th>
+                        <th>Prénom</th>
+                        <th>Numéro de téléphone</th>
+                        <th>Date de réservation </th>
+                        <th>L'heure de la réservation</th>
+                        <th>Nombre de personnes</th>
+                        <th>Date de création </th>
+                        <th colspan="2">Actions</th>
+                        </td>
+                </thead>
+                <tbody>
+                    <!--récupérer et retourner une $réservation . -->
+                    <?php foreach ($reservations as $reservation) : ?>
+                        <tr>
+                            <td><?= htmlspecialchars($reservation['lastname']) ?></td>
+                            <td><?= htmlspecialchars($reservation['firstname']) ?></td>
+                            <td><?= htmlspecialchars($reservation['phone']) ?></td>
+                            <td><?= htmlspecialchars($reservation['res_date']) ?></td>
+                            <td><?= htmlspecialchars($reservation['res_hours']) ?></td>
+                            <td><?= htmlspecialchars($reservation['nbrpersonnes']) ?></td>
+                            <td><?= htmlspecialchars($reservation['res_create_at']) ?></td>
+                             <!--liens pour modifier ou supprimer une réservation-->
+                            <td><a href="index.php?road=edit_reservation&id=<?= $reservation['res_id'] ?>"> Modifier</a></td>
+                            <td><a href="index.php?road=delete_reservation&id=<?= $reservation['res_id'] ?>">Supprimer</a></td>
+                        </tr>
+                    <?php endforeach; ?>
+                </tbody>
+                <tbody id="reserv_list">
+
+                </tbody>
+            </table>
+        </div>
+    </article>
+</section>

@@ -1,0 +1,13 @@
+<?php
+//si le tableau erreur n'est pas égal à 0.
+if (isset($errors) && count($errors) > 0) : ?>
+  <div id="messagesErrors">
+    <div>
+      <ul>
+        <?php foreach ($errors as $error) : ?>
+          <li class="errors"><?= $error; ?></li>
+        <?php endforeach; ?>
+      </ul>
+    </div>
+  </div>
+<?php endif; ?>

@@ -1,0 +1,115 @@
+<!--Page home.-->
+<section class="section_presentation">
+    
+    <!-- présentation -->
+    <article class="presentation">
+
+       
+
+        <h2>
+            <i class="fa-solid fa-utensils"></i>Qui Sommes-Nous ?<i class="fa-solid fa-utensils"></i>
+        </h2>
+    
+        <div id="slider">
+
+            <div onclick="ChangeSlide(-1)"> <i class="fa-solid fa-circle-chevron-left"></i></div>
+            <img src="asset/images/img_home/brigade5.jpg" alt="photo brigade en cuisine" id="slide">
+            <div onclick="ChangeSlide(1)"><i class="fa-solid fa-circle-chevron-right"></i></div>
+        </div>
+
+        <h3>La gastronomie comme cœur de métier</h3>
+        <p>Nawel'S Naturalia Food incarne un restaurant où l'art culinaire est une vocation profonde, sans prestation d'hébergement. Créateurs d'émotions et artisans des saveurs, notre chef porte fièrement les engagements de Nawel'S Naturalia Food : sélection rigoureuse des produits locaux, respect de la biodiversité et des saisons.</p>
+
+        <p> Chaque repas dans nos établissements se veut une expérience sensorielle mémorable. Nos tables, véritables écrins de raffinement, sont le théâtre d'un voyage gustatif où chaque détail est pensé pour sublimer la cuisine du chef. Mais l'expérience ne s'arrête pas là : elle est aussi un hommage au partage, à l'humain, à ces gestes précis et élégants de notre équipe en salle, révélant l'âme culinaire de notre maison.</p>
+        <p>
+        De cette harmonie naît un moment d'exception, une signature unique autour du goût, ancrée dans des valeurs d'authenticité, de créativité, de passion et d'engagement.
+        </p>
+        
+        <!-- tableau des horraires d'ouverture-->
+    
+        <h2>
+            <i class="fa-solid fa-utensils"></i>Nos Horaires<i class="fa-solid fa-utensils"></i>
+        </h2>
+
+        <div class="horraires">
+            <table class="tableau">
+                <tr>
+                    <td><strong>Lundi</strong></td>
+                    <td>11:00-15:00</td>
+                    <td>19:00-22:00</td>
+                </tr>
+                <tr>
+                    <td><strong>Mardi</strong></td>
+                    <td>11:00-15:00</td>
+                    <td>19:00-22:00</td>
+                </tr>
+                <tr>
+                    <td><strong>Mercredi</strong></td>
+                    <td>11:00-15:00</td>
+                    <td>19:00-22:00</td>
+                </tr>
+                <tr>
+                    <td><strong>Jeudi</strong></td>
+                    <td>11:00-15:00</td>
+                    <td>19:00-22:00</td>
+                </tr>
+                <tr>
+                    <td><strong>Vendredi</strong></td>
+                    <td>11:00-15:00</td>
+                    <td>19:00-22:00</td>
+                </tr>
+                <tr>
+                    <td><strong>Samedi</strong></td>
+                    <td>11:00-15:00</td>
+                    <td>19:00-22:00</td>
+                </tr>
+                <tr>
+                    <td><strong>Dimanche</strong></td>
+                    <td></td>
+                    <td>Fermé</td>
+                </tr>
+            </table>
+        </div>
+        
+        <!-- adresse et et map google-->
+        <div class="adresse">
+            <h2>
+                <i class="fa-solid fa-utensils"></i>Où Sommes-Nous<i class="fa-solid fa-utensils"></i>
+            </h2>
+
+            <p>
+                <i class="fa-solid fa-location-dot"></i>02 Rue Cornilliot 77400 Thorigny Sur Marne
+
+            </p>
+
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2623.6615999744963!2d2.7072842156201657!3d48.88372727929!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e61b749ff8c8e9%3A0x7ff3e41de49743f!2sRue%20Cornilliot%2C%2077400%20Thorigny-sur-Marne!5e0!3m2!1sfr!2sfr!4v1651360429557!5m2!1sfr!2sfr" width="500" height="200" style="border: 0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <!-- affichage des commentaires-->
+        <div class="detail_comments">
+
+            <div class="display_comments">
+                <h3>Vos commentaires</h3>
+
+                <?php foreach ($comments as $comment) : ?>
+                    <div class="scroll">
+                        <ul class=" table_comment">
+                            
+                                <li> <p><?= htmlspecialchars($comment['user_lastname']) ?>:</p></li>
+                                <li>
+                                    <q>
+                                        <?= htmlspecialchars($comment['com_content']) ?>
+                                    </q>
+                                </li>
+                           
+
+                        </ul>
+                    </div>
+                <?php endforeach; ?>
+
+            </div>
+            <div>
+                <?php require_once('comments.phtml'); ?>
+            </div>
+        </div>
+    </article>
+</section>

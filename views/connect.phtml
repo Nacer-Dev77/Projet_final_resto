@@ -1,0 +1,25 @@
+<!--Page du formulaire de connexion.-->
+<section class="section_users">
+    <article class="users">
+
+		<img src="asset/images/img_connect.webp" alt="image connection" class="img_form">
+	
+		<form action="index.php?route=UserConnect" method="POST" class="form_connect">
+	
+			<h2>Identifiez-Vous</h2>
+			<?php require_once('_errors.phtml'); ?>
+	
+	
+			<input type="email" name="email" id="email" placeholder="votre email...."><br>
+	
+			<input type="password" name="password" id="userPassword" placeholder="Entrez votre mot de passe....."><br>
+	
+			<button type="submit">Connexion</button><a href="">Mot de passe oublié ?</a><br>
+	
+			<p><strong>Vous n’avez pas de compte ?</strong> <a href="index.php?route=create">Créez votre compte</a></p>
+	
+	
+		</form>
+
+    </article>
+ </section>

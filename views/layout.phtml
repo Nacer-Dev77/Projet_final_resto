@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="restaurant gastronomique produits bio et naturel en seine et marne">
+    <title>Nawel'S Naturalia food</title>
+    <link rel="icon" type="image/png" href="favicon/fav-resto1.png"> 
+    <link rel="stylesheet" href="asset/css/normalize.css">
+    <link rel="stylesheet" href="asset/css/style.css">
+    <script src=" https://kit.fontawesome.com/3e516f940b.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="nav">
+         <span class="volute_left_write"></span>
+         <h1 class="title"></h1>
+         <span class="volute_right_write"></span>
+    </header>
+
+    <main>
+        <nav>
+            <?php require_once('_nav.phtml'); ?>
+        </nav>
+        <div class="navbar_session">
+            <!-- Verrifier si utilisteur est connecter -->
+            <?php if (isset($_SESSION['connected']) && $_SESSION['connected'] == true) : ?>
+                <p> <img src="asset/images/img_admin/fav_admin1.jpg" alt="image user" class="img_user">
+                <!--si connexion réussite afficher le message d'accueil avec le nom de l'utilisateur.-->Bonjour, <?= htmlspecialchars($_SESSION['user']['lastname']) ?></p>
+            <?php else : ?>
+
+            <?php endif; ?>
+        </div>
+            <?php include_once $views . '.phtml' ?>
+
+    </main>
+
+    <footer>
+        <div class="contact">
+            <i class="fas fa-envelope"></i> <a href="mailto:racryan@hotmail.fr" class="mail">Nous contacter</a>
+
+            <h4>Suivez-Nous Sur</h4>
+
+            <a href="https://fr-fr.facebook.com/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://www.instagram.com/?hl=fr" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://twitter.com/?lang=fr" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+       
+            <h4><a href="index.php?route=informations">Mentions légales</a></h4>  
+            
+            <p>
+                ce site a été réalisé par
+                <a href="https://fr-fr.facebook.com/" target="_blank">Nacer Rachedi</a>
+            </p>
+            <p class="copyright" >
+            &copy; Copyright
+            <script>document.write(new Date().getFullYear())</script>
+            </p>
+        </div>
+    </footer>
+      <script src="asset/js/main.js"></script>
+      <script src="asset/js/animation.js"></script>
+      <script type="text/javascript" src="asset/js/basket.js"></script>
+
+</body>
+
+</html>

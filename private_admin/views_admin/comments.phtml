@@ -1,0 +1,33 @@
+<!--Tableau de gestion des commentaires-->
+<section class="section_comments_table">
+    <article class="comments_table">
+
+        <h2>Tableau des Commentaires</h2>
+        <div>
+            <table class="tab_comments">
+                <thead>
+                    <tr>
+                        <th>Id-utilisateur</th>
+                        <th>Commentaires</th>
+                        <th>date-création</th>
+                        <th>Actions</th>
+                        </td>
+                </thead>
+                <tbody>
+                    <!--récupérer et retourner un commentaire . -->
+                    <?php foreach ($comments as $comment) : ?>
+                        <tr>
+                            <td><?= htmlspecialchars($comment['user_id']) ?></td>
+                            <td><?= htmlspecialchars($comment['com_content']) ?></td>
+                            <td><?= htmlspecialchars($comment['com_create_at']) ?></td>
+                             <!--liens pour supprimer commentaire-->
+                            <td><a href="index.php?road=delete_comment&id=<?= $comment['com_id'] ?>">Supprimer</a></td>
+                        </tr>
+                    <?php endforeach; ?>
+                </tbody>
+            </table>
+        </div>
+    </article>
+</section>
+
+</article>

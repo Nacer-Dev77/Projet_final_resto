@@ -1,0 +1,40 @@
+<!--tableau de gestion des produits.-->
+<section class="section_products">
+
+    <article class="products">
+        <a href="index.php?road=add_product">Ajouter un produit </a>
+
+        <h2>Table des produits</h2>
+
+        <div>
+            <table class="tab_products">
+                <thead>
+                    <tr>
+                        <th>Nom du produit</th>
+                        <th>Description</th>
+                        <th>Catégorie</th>
+                        <th>Prix </th>
+                        <th>Image</th>
+                        <th colspan="2">Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                        <!--récupérer et retourner un produit . -->
+                    <?php foreach ($products as $product) : ?>
+
+                        <tr>
+                            <td><?= htmlspecialchars($product['prod_name']) ?></td>
+                            <td><?= htmlspecialchars($product['prod_description']) ?></td>
+                            <td><?= htmlspecialchars($product['prod_category_id']) ?></td>
+                            <td><?= number_format(htmlspecialchars($product['prod_price']), 2) ?>€</td>
+                            <td><?= htmlspecialchars($product['prod_image']) ?></td>
+                            <!--liens pour modifier ou supprimer produit-->
+                            <td> <a href="index.php?road=update_product&id=<?= $product['prod_id'] ?>">Modifier</a></td>
+                            <td> <a href="index.php?road=delete_product&id=<?= $product['prod_id'] ?>">Supprimer</a></td>
+                        </tr>
+                    <?php endforeach; ?>
+                </tbody>
+            </table>
+        </div>
+    </article>
+</section>

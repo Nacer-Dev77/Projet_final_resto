@@ -1,0 +1,60 @@
+<div class="menus">
+    <ul>
+        <li>
+            <a href="index.php?route=home">Accueil</a>
+        </li>
+         <!--si connexion réussite   -->
+        <?php if (isset($_SESSION['connected']) && $_SESSION['connected'] == true) : ?>
+
+         <!--si connexion réussite afficher la bar de navigation de l'utilisateur connecté -->
+            <li>
+                <a href="index.php?route=reservation">Réservation</a>
+            </li>
+            </li>
+
+            <li>
+                <a href="index.php?route=deconnect">Déconnexion</a>
+            </li>
+
+        <?php else : ?>
+
+         <!--sinon afficher la bar de navigation de l'utilisateur non connecté -->
+
+            <li>
+                <a>Menu</a>
+
+                <ul>
+                    <li><a href="index.php?route=entrees">Nos Entrées</a></li>
+                    <li><a href="index.php?route=plats">Nos Plats</a></li>
+                    <li>
+                        <a href="index.php?route=desserts">Nos Desserts</a>
+                    </li>
+                    <li>
+                        <a href="index.php?route=boissons">Nos Boissons</a>
+                    </li>
+                </ul>
+            </li>
+
+            <li>
+                <a>Mon Compte</a>
+
+                <ul class="user">
+                    <li>
+                        <a href="index.php?route=connect"><i class="fa-solid fa-user"></i>
+                            Identifiez-Vous</a>
+                    </li>
+                    <li>
+                        <a href="index.php?route=create">Créez votre compte</a>
+                    </li>
+                </ul>
+            </li>
+            
+            <li >
+                <a href="index.php?route=basket">Mon panier<i class="fa-solid fa-basket-shopping"></i></a>
+            </li>
+
+    </ul>
+        <?php endif; ?>
+
+
+</div>
